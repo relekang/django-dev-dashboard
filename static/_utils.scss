@@ -1,0 +1,44 @@
+$gray-medium: #859D94;
+$text: #0C3C26;
+$text-light: #798780;
+$background: #f8f8f8;
+$gray-line: #CFE3DC;
+$green-very-light: #C9F0DD;
+$green-light: #93D7B7;
+$green-medium: #44B78B;
+$green-medium-dark: #2B8C67;
+$green: #20AA76;
+$green-dark: #0C4B33;
+$green-dark-text: #3C8866;
+$white: #F1FFF7;
+$warning-yellow: #FFFDF1;
+$warning-dark-yellow: #F5F1C7;
+$red: #BA2121;
+$red-dark: #6A0E0E;
+
+@mixin sans-serif {
+  font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
+}
+
+@mixin link-green {
+  color: $green;
+  text-decoration: none;
+  &:visited {
+    color: $green;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: lighten($green, 6%);
+    text-decoration: none;
+  }
+
+}
+
+html {
+  font-size: 62.5%;
+}
+@mixin font-size ( $size: 16 ) {
+  font-size: $size + px;
+  font-size: $size/10 + rem;
+}

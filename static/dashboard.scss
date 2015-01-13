@@ -1,0 +1,105 @@
+@import "compass";
+@import "utils";
+
+body {
+  padding-top: 40px;
+  background-color: $background;
+  color: $text;
+  @include sans-serif;
+  text-align: center;
+}
+
+a {
+  @include link-green;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include sans-serif;
+  font-weight: 400;
+
+  a {
+    text-decoration: none;
+    @include link-green;
+  }
+}
+h1 {
+  @include font-size(28);
+}
+h2 {
+  @include font-size(24);
+  margin-bottom: 0;
+}
+h3 {
+  @include font-size(20);
+}
+
+h4 {
+  @include font-size(16);
+}
+
+.wrapper{
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.metric {
+  width: 240px;
+  padding: 0 20px 10px 20px;
+  margin: 10px 10px 20px 10px;
+  border: 1px solid $gray-line;
+  @include border-radius(4px);
+  display: inline-block;
+  position: relative;
+
+  h3 {
+    padding: 10px;
+    margin: 0 -20px;
+    @include font-size(18);
+    font-weight: 200;
+    display: block;
+    text-align: left;
+    color: $green-very-light;
+    background: $green-medium;
+    a {
+      color: $green-very-light;
+    }
+  }
+
+  .value {
+    height: 1.2em;
+    max-width: 40%;
+    width: 40%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 5em;
+    display: inline-block;
+    .timestamp {
+      display:block;
+      font-size: 0.2em;
+    }
+  }
+
+  .sparkline {
+    width: 49%;
+    height: 50px;
+    padding-top: 16px !important;
+    display: inline-block;
+    line-height: 5em;
+    .overlay{
+      top: 16px !important;
+    }
+  }
+}
+
+.graph{
+  width: 100%;
+  margin: 0 auto;
+  height: 500px;
+}

@@ -3,7 +3,10 @@
 *.swp
 *.un~
 *.db
+.sass-cache
 static_root/
 trac-creds.txt
 .epio-app
 .DS_Store
+
+static/dashboard.css

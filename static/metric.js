@@ -12,7 +12,7 @@ $(function () {
             $("#hover").remove();
         }
     };
-    
+
     $.getJSON(url, function(response) {
         for (var i=0; i < response.data.length; i++) {
             response.data[i][0] = response.data[i][0] * 1000;
@@ -25,7 +25,7 @@ $(function () {
             },
             yaxis: {min: 0, ticks: 4},
             grid: {borderWidth: 0, hoverable: true, color: "white"},
-            colors: ["yellow"],
+            colors: ["#0C4B33"],
         };
         if (response.period == "daily") {
             options.bars = {
@@ -41,12 +41,12 @@ $(function () {
             };
         }
         var plot = $.plot(e, [response.data], options);
-        
+
         var format_message = function(timestamp, measurement) {
             var unit = measurement == 1 ? response.unit : response.unit_plural;
-            return dddash.format_timestamp(timestamp, response.period) + '<br>' + measurement + ' ' + unit; 
+            return dddash.format_timestamp(timestamp, response.period) + '<br>' + measurement + ' ' + unit;
         }
-        
+
         var previousPoint = null;
         e.bind("plothover", function(event, pos, item) {
             if (item) {
